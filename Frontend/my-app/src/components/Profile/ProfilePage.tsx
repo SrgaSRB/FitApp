@@ -148,7 +148,7 @@ const UserPage = () => {
                 <div className="user-profile-wrapper">
                     <div className="up-user-card-div">
                         <div className="up-user-card-image-div">
-                            <img src={ userInfo.gender === "Male" ? "assets/images/female-placeholder.webp" :  "assets/images/male-placeholder.avif"} loading="lazy" alt="" className="image-2" />
+                            <img src={ userInfo.gender === "Female" ? "assets/images/female-placeholder.webp" :  "assets/images/male-placeholder.avif"} loading="lazy" alt="" className="image-2" />
                         </div>
                         <div className="form-block w-form">
                             <form id="email-form-3" name="email-form-3" className="form" onSubmit={handleSubmit}>

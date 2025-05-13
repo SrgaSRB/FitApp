@@ -36,7 +36,6 @@ const LoginPage: React.FC = () => {
             if (res.status === 200) {
                 const accessToken = res.data.accessToken as string; 
                 login(accessToken);
-                window.location.href = "/";      
             } else {
                 setError("Pogrešno korisničko ime ili lozinka.");
             }

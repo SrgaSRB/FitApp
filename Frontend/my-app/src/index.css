@@ -2124,7 +2124,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .home-section {
-  background-image: linear-gradient(#00000080, #00000080), url("https://cdn.prod.website-files.com/681df8a60a9dd84931009333/681e63b9bb30040a02bd140d_medium-shot-people-training-together.jpg");
+  background-image: linear-gradient(#00000080, #00000080), url("/public/assets/images/hero-bg.jpg");
   background-position: 0 0, 50%;
   background-size: auto, cover;
 }
@@ -2817,7 +2817,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .login-section {
-  background-image: url("https://cdn.prod.website-files.com/681df8a60a9dd84931009333/681e94537736a3e5d5735e3c_16001.jpg");
+  background-image: url("/public/assets/images/login-bg.jpg");
   background-position: 50% 25%;
   background-size: cover;
 }
@@ -3453,7 +3453,7 @@ textarea.w-input, textarea.w-select {
 
   .navbar-section {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     position: fixed;
     inset: auto 0% 0%;
   }
@@ -3473,7 +3473,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .newtraining-wrapper {
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 80px;
   }
 
@@ -3522,7 +3522,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .home-left-div {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
     padding-top: 0;
   }
@@ -3531,6 +3531,10 @@ textarea.w-input, textarea.w-select {
     grid-column-gap: 8px;
     grid-row-gap: 8px;
     display: none;
+  }
+
+  .text-span-2 {
+    font-size: 3.5rem;
   }
 
   .heading {
@@ -3552,6 +3556,7 @@ textarea.w-input, textarea.w-select {
     margin-bottom: auto;
     padding: 12px;
     display: flex;
+    position: relative;
   }
 
   .today-trainings-div-block.mobile-visible-none {
@@ -3581,7 +3586,7 @@ textarea.w-input, textarea.w-select {
   .text-block-6 {
     color: var(--fontcolor-1);
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
     font-size: 1rem;
   }
 
@@ -3617,6 +3622,7 @@ textarea.w-input, textarea.w-select {
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 20px;
     display: flex;
   }
 
@@ -3629,6 +3635,7 @@ textarea.w-input, textarea.w-select {
     margin-bottom: auto;
     margin-right: 8px;
     display: flex;
+    position: relative;
   }
 
   .home-training-history-div-block.visible-none, .home-training-history-div-block.mobile-visible-none {
@@ -3652,17 +3659,20 @@ textarea.w-input, textarea.w-select {
   }
 
   .text-block-8 {
-    font-size: .75rem;
+    font-size: .8rem;
+    font-weight: 200;
   }
 
   .text-block-9 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
 
   .progress-wrapper {
     grid-column-gap: 32px;
     grid-row-gap: 32px;
-    padding-top: 40px;
+    min-height: 100dvh;
+    padding-top: 20px;
     padding-bottom: 80px;
   }
 
@@ -3705,7 +3715,7 @@ textarea.w-input, textarea.w-select {
   .user-profile-wrapper {
     height: auto;
     max-height: none;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 80px;
   }
 
@@ -3760,8 +3770,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .register-wrapper {
-    height: 100dvh;
-    max-height: 100dvh;
+    min-height: 100dvh;
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -3777,7 +3786,7 @@ textarea.w-input, textarea.w-select {
   .last-3-training-section {
     z-index: 2000;
     background-color: #0006;
-    display: flex;
+    display: block;
     position: fixed;
     inset: 0%;
   }
@@ -3793,6 +3802,7 @@ textarea.w-input, textarea.w-select {
   .today-trainings-section {
     z-index: 2000;
     background-color: #0006;
+    display: block;
     position: fixed;
     inset: 0%;
   }
@@ -3831,5 +3841,24 @@ textarea.w-input, textarea.w-select {
   .progress-week-help-div {
     grid-column-gap: 8px;
     grid-row-gap: 8px;
+  }
+
+  .link-block-2 {
+    border: 3px solid #0000;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 12px;
+    transition: all .2s;
+    position: absolute;
+    inset: 0% 0% auto auto;
+  }
+
+  .link-block-2:hover {
+    border: 3px solid gray;
+    border-radius: 50%;
+  }
+
+  .image-3 {
+    width: 24px;
   }
 }
