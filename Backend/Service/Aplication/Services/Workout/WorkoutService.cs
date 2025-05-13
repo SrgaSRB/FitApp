@@ -31,5 +31,25 @@ namespace Service.Aplication.Services.Workout
             };
 
         }
+
+        public Task<List<WorkoutDto>> GetLastXWorkouts(Guid userId, int x, CancellationToken ct)
+        {
+            return _workouts.GetLastXWorkoutsAsync(userId, x, ct);
+        }
+
+        public Task<List<WorkoutDto>> GetTodayWorkoutsAsync(Guid userId, CancellationToken ct = default)
+        {
+            return _workouts.GetTodayWorkoutsAsync(userId, ct);
+        }
+
+        public async Task<bool> AddWorkoutAsyncs(Guid userId, CreateWorkoutDto dto, CancellationToken ct)
+        {
+            return await _workouts.AddWorkoutAsync(userId, dto, ct);
+        }
+
+        public Task<List<WeeklyStatistic>> GetWeeklyStatistics(Guid userId, ProgressDateDto dto, CancellationToken ct = default)
+        {
+            return _workouts.GetWeeklyStatistics(userId, dto, ct);
+        }
     }
 }

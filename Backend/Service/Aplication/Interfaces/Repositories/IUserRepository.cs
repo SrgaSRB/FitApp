@@ -1,4 +1,5 @@
-﻿using Service.Domain.Models;
+﻿using Service.Aplication.DTOs.User;
+using Service.Domain.Models;
 
 namespace Service.Aplication.Interfaces.Repositories
 {
@@ -10,5 +11,8 @@ namespace Service.Aplication.Interfaces.Repositories
         Task<User?> GetUserByUsernameAsync(string username, CancellationToken ct = default);
         Task<User?> GetUserByEmailAsync(string email, CancellationToken ct = default);
         Task<User?> GetUserByIdAsync(Guid id, CancellationToken ct = default);
+
+        Task<User?> GetUserInfoAsync(Guid id, CancellationToken ct = default);
+        Task<bool> UpdateUserInfoAsync(Guid id, UpdateUserDto userInfo, CancellationToken ct = default);
     }
 }

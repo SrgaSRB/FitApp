@@ -2,6 +2,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Raven.Client.Exceptions;
@@ -10,6 +11,7 @@ using Service.Aplication.Interfaces.Repositories;
 using Service.Aplication.Interfaces.Security;
 using Service.Aplication.Interfaces.Services;
 using Service.Aplication.Services.Auth;
+using Service.Aplication.Services.UserService;
 using Service.Aplication.Services.Workout;
 using Service.Aplication.Validators.Auth;
 using Service.Infrastructure.Data;
@@ -45,6 +47,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IWorkoutRepository, WorkoutRepository>();
 builder.Services.AddScoped<IWorkoutService, WorkoutService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
 builder.Services.AddControllers().AddFluentValidation();
@@ -70,6 +73,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(key)
         };
     });
+
 
 builder.Services.AddAuthorization();
 

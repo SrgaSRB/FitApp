@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CEW9DTR3qLaU2Ffpt1xmoywih5E5hF99hHH+BXNLQJtLCUJj/h8UUJWX7/jCe/VRhkJtuY6/cApItzDrGDcBhQ==",
+  "dgSpecHash": "0hbi400HuUUYG8zk5tecE0uEvHlr525MOyciOLDmT+W+WK4GhPMQps34AA384VpsiExb3L3o+uXFuYTIRlWXog==",
   "success": true,
   "projectFilePath": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Service.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,8 @@
     "C:\\Users\\SRDJAN\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\SRDJAN\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
     "C:\\Users\\SRDJAN\\.nuget\\packages\\ravendb.client\\7.0.2\\ravendb.client.7.0.2.nupkg.sha512",
+    "C:\\Users\\SRDJAN\\.nuget\\packages\\sendgrid\\9.29.3\\sendgrid.9.29.3.nupkg.sha512",
+    "C:\\Users\\SRDJAN\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\SRDJAN\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\SRDJAN\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\SRDJAN\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

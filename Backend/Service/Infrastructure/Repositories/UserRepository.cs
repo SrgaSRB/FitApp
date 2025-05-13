@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Service.Aplication.DTOs.User;
 using Service.Aplication.Interfaces.Repositories;
 using Service.Domain.Models;
 using Service.Infrastructure.Data;
@@ -54,6 +55,36 @@ namespace Service.Infrastructure.Repositories
 
             return user;
         }
-    }
 
+        public async Task<User?> GetUserInfoAsync(Guid id, CancellationToken ct = default)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Id == id, ct);
+        }
+
+        public async Task<bool> UpdateUserInfoAsync(Guid id, UpdateUserDto userInfo, CancellationToken ct = default)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Id == id, ct);
+
+            if(user == null)
+            {
+                return false;
+            }
+
+            user.FirstName = userInfo.FirstName;
+            user.LastName = userInfo.LastName;
+            user.Username = userInfo.Username;
+            user.Email = userInfo.Email;
+            user.Gender = userInfo.Gender;
+            user.Birthday = userInfo.Birthday.ToUniversalTime();
+            user.Weight = userInfo.Weight;
+            user.Height = userInfo.Height;
+
+            await _context.SaveChangesAsync(ct);
+
+            return true;
+
+        }
+    }
 }

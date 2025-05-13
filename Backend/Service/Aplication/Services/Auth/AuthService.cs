@@ -42,7 +42,7 @@ namespace Service.Aplication.Services.Auth
 
             //var user = _mapper.Map<User>(dto);
 
-            var user = new User
+            var user = new Domain.Models.User
             {
                 Id = Guid.NewGuid(),
                 Username = dto.Username,
