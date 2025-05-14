@@ -6,7 +6,8 @@ import api from "../../api";
 import Loader from "../Shared/Loader";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import TrainingHistoryView from "./TrainingHistoryView";
+import TodayTrainingsView from "./TodayTrainingsView";
+import LastTrainingsHistoryView from "./LastTrainingsHistoryView";
 
 type JwtPayload = {
     sub: string;
@@ -32,7 +33,7 @@ interface WorkoutDto {
     note?: string | null;
 }
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
 
     const [workoutSummary, setWorkoutSummary] = React.useState<WorkoutSummaryDto | null>(null);
     const [userInfo, setUserInfo] = React.useState<JwtPayload | null>(null);
@@ -136,15 +137,15 @@ const HomePage: React.FC = () => {
         <>
 
             {isOpenTrainingHistory && (
-                <TrainingHistoryView
+                <LastTrainingsHistoryView
                     trainingHistory={workoutLast3}
                     onClose={() => setIsOpenTrainingHistory(false)}
                 />
             )}
 
             {isOpenTodayWorkouts && (
-                <TrainingHistoryView
-                    trainingHistory={todayWorkouts}
+                <TodayTrainingsView
+                    todayTrainings={todayWorkouts}
                     onClose={() => setIsOpenTodayWorkouts(false)}
                 />
             )}
@@ -198,7 +199,7 @@ const HomePage: React.FC = () => {
                                     {todayWorkouts.length === 0 && (
                                         <div className="today-trainings-lis-div-no-trainings">
                                             <div>Nemate treninga za danas</div>
-                                            <Link to="/new-workout">Dodaj novi trening</Link>
+                                            <Link to="/new-workout" className="link-3">Dodaj novi trening</Link>
                                         </div>
                                     )}
 
@@ -231,7 +232,7 @@ const HomePage: React.FC = () => {
                                     {workoutLast3.length === 0 && (
                                         <div className="today-trainings-lis-div-no-trainings">
                                             <div>Nemate treninga za danas</div>
-                                            <Link to="/new-workout">Kreiraj svoj prvi trening!</Link>
+                                            <Link to="/new-workout" className="link-3">Kreiraj svoj prvi trening!</Link>
                                         </div>
                                     )}
 

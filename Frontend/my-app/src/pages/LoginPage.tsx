@@ -2,24 +2,33 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import api from "../api";
 import { useAuth } from "../context/AuthContext";
+import Loader from "../components/Shared/Loader";
 
 const LoginPage: React.FC = () => {
 
     const [usernameOrEmail, setUsernameOrEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
     const [error, setError] = React.useState("");
+    const [loading, setLoading] = React.useState(false);
 
     useEffect(() => {
+
+        setLoading(true);
+
         const token = localStorage.getItem("token");
         if (token) {
             window.location.href = "/home";
         }
+
+        setLoading(false);
     }, []);
 
     const { login } = useAuth();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
         e.preventDefault();
+        setLoading(true);
         setError("");
 
         if (!usernameOrEmail || !password) {
@@ -34,7 +43,7 @@ const LoginPage: React.FC = () => {
             });
 
             if (res.status === 200) {
-                const accessToken = res.data.accessToken as string; 
+                const accessToken = res.data.accessToken as string;
                 login(accessToken);
             } else {
                 setError("Pogrešno korisničko ime ili lozinka.");
@@ -42,6 +51,8 @@ const LoginPage: React.FC = () => {
         } catch (err) {
             console.error(err);
             setError("Greška prilikom prijave. Molimo pokušajte ponovo.");
+        }finally{
+            setLoading(false);
         }
     };
 
@@ -63,7 +74,14 @@ const LoginPage: React.FC = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
 
-                            <input type="submit" data-wait="Please wait..." className="submit-button-2 w-button" value="Prijavi se" />
+                            <div className="div-block-10">
+                                {loading === true ? (
+                                    <Loader bgColor="transparent" width="100%" height="100%"/>
+                                ):(
+                                    <input type="submit" data-wait="Please wait..." className="submit-button-2 w-button" value="Prijavi se" />
+                                )}
+
+                            </div>
 
                             {error && <div className="error-text">{error}</div>}
 

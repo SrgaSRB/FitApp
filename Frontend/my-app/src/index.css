@@ -2048,8 +2048,8 @@ textarea.w-input, textarea.w-select {
 
 :root {
   --fontcolor-1: #1a1a1a;
-  --color1: #bcf246;
   --navbar-bg: #192026;
+  --color1: #bcf246;
 }
 
 .w-layout-blockcontainer {
@@ -2124,7 +2124,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .home-section {
-  background-image: linear-gradient(#00000080, #00000080), url("/public/assets/images/hero-bg.jpg");
+  background-image: linear-gradient(#00000080, #00000080), url("https://cdn.prod.website-files.com/681df8a60a9dd84931009333/681e63b9bb30040a02bd140d_medium-shot-people-training-together.jpg");
   background-position: 0 0, 50%;
   background-size: auto, cover;
 }
@@ -2183,7 +2183,12 @@ textarea.w-input, textarea.w-select {
   background-color: var(--color1);
   color: var(--fontcolor-1);
   border-radius: 30px;
-  font-weight: 600;
+  font-weight: 500;
+  transition-duration: .2s;
+}
+
+.link-block.nav-selected:hover {
+  border-color: #0000;
 }
 
 .div-block {
@@ -2606,7 +2611,7 @@ textarea.w-input, textarea.w-select {
   color: var(--fontcolor-1);
   cursor: pointer;
   background-color: #fff;
-  border: 3px solid #000;
+  border: 1px solid #0000;
   border-radius: 12px;
   width: 330px;
   height: 50px;
@@ -2614,6 +2619,7 @@ textarea.w-input, textarea.w-select {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 1.25rem;
+  box-shadow: 0 2px 5px #0003;
 }
 
 .select-field:hover {
@@ -2817,7 +2823,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .login-section {
-  background-image: url("/public/assets/images/login-bg.jpg");
+  background-image: url("https://cdn.prod.website-files.com/681df8a60a9dd84931009333/681e94537736a3e5d5735e3c_16001.jpg");
   background-position: 50% 25%;
   background-size: cover;
 }
@@ -2975,8 +2981,18 @@ textarea.w-input, textarea.w-select {
   border: 1px solid #404040;
 }
 
-.div-block-7 {
+.last-3-training-section {
   display: none;
+  position: fixed;
+  inset: 0%;
+}
+
+.today-trainings-section {
+  display: none;
+}
+
+.div-block-7 {
+  display: block;
 }
 
 .button-2 {
@@ -3010,6 +3026,7 @@ textarea.w-input, textarea.w-select {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   display: flex;
+  position: relative;
 }
 
 .today-trainings-lis-div-no-trainings {
@@ -3036,7 +3053,6 @@ textarea.w-input, textarea.w-select {
 .button-4 {
   color: var(--fontcolor-1);
   background-color: #adf216;
-  border: 3px solid #000;
   border-radius: 12px;
   justify-content: center;
   align-items: center;
@@ -3046,6 +3062,7 @@ textarea.w-input, textarea.w-select {
   font-weight: 500;
   transition: all .3s;
   display: flex;
+  box-shadow: 0 2px 5px #0003;
 }
 
 .button-4:hover {
@@ -3058,6 +3075,167 @@ textarea.w-input, textarea.w-select {
   grid-row-gap: 32px;
   flex-flow: column;
   display: flex;
+}
+
+.image-4 {
+  width: 24px;
+  display: none;
+}
+
+.button-5 {
+  color: #fff;
+  background-color: gray;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  inset: 0% 0% 0% auto;
+  box-shadow: 0 2px 5px #0003;
+}
+
+.button-5.trainings-history-button-for-mobile {
+  display: none;
+}
+
+.training-history-section {
+  z-index: 2000;
+  background-color: #00000080;
+  display: block;
+  position: fixed;
+  inset: 0%;
+}
+
+.training-history-wrapper {
+  flex-flow: column;
+  height: 100dvh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.training-history-list-block {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #ffffff80;
+  border-radius: 40px;
+  flex-flow: column;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  overflow: auto;
+}
+
+.training-history-list-title {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.training-history-div {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  background-color: #ffffff80;
+  border-radius: 20px;
+  grid-template-rows: auto;
+  grid-template-columns: .75fr .25fr .25fr .75fr .75fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  padding: 16px 76px 16px 16px;
+  display: grid;
+  position: relative;
+  box-shadow: 0 2px 5px #0003;
+}
+
+.text-block-14 {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.text-span-7 {
+  font-weight: 600;
+}
+
+.text-block-15 {
+  max-width: 240px;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.text-block-15.training-history-div-note {
+  max-height: 100px;
+  font-size: 1rem;
+  overflow: auto;
+}
+
+.div-block-9 {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.select-field-2 {
+  color: var(--fontcolor-1);
+  background-color: #ffffff80;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+  margin-bottom: 0;
+  padding: 8px 20px;
+  font-size: 1.25rem;
+  font-weight: 200;
+  box-shadow: 0 2px 5px #0003;
+}
+
+.form-5 {
+  display: flex;
+}
+
+.training-history-list-div {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  flex-flow: column;
+  padding: 10px;
+  display: flex;
+  overflow: auto;
+}
+
+.image-5 {
+  width: 48px;
+}
+
+.link-block-3 {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 20px;
+  position: absolute;
+  inset: 0% 0% auto auto;
+}
+
+.div-block-10 {
+  align-self: center;
+}
+
+.link-block-4 {
+  background-color: #ff4040;
+  border-radius: 0 20px 20px 0;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  position: absolute;
+  inset: 0% 0% 0% auto;
 }
 
 @media screen and (max-width: 991px) {
@@ -3176,6 +3354,8 @@ textarea.w-input, textarea.w-select {
   .select-field {
     width: 200px;
     height: 44px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1rem;
   }
 
@@ -3233,9 +3413,64 @@ textarea.w-input, textarea.w-select {
     font-size: 1rem;
   }
 
+  .form-4 {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: space-between;
+  }
+
   .button-4 {
-    padding: 4px 30px;
+    padding: 4px 20px;
     font-size: 1rem;
+  }
+
+  .button-5 {
+    margin-left: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .training-history-list-block {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    border-radius: 36px;
+    padding: 10px;
+  }
+
+  .training-history-div {
+    border-radius: 26px;
+    padding-left: 8px;
+    padding-right: 58px;
+  }
+
+  .text-block-14 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .text-block-15 {
+    font-size: 1.75rem;
+  }
+
+  .text-block-15.training-history-div-note {
+    max-width: 160px;
+    max-height: 120px;
+    font-size: .9rem;
+  }
+
+  .div-block-9 {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-5 {
+    width: 40px;
+  }
+
+  .link-block-4 {
+    width: 50px;
   }
 }
 
@@ -3344,7 +3579,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .select-field {
-    width: 33%;
+    width: 170px;
   }
 
   .progrss-weeks-list-div {
@@ -3370,6 +3605,13 @@ textarea.w-input, textarea.w-select {
 
   .up-user-card-div {
     flex-flow: column;
+  }
+
+  .up-user-card-image-div {
+    border-radius: 0;
+    align-self: stretch;
+    width: auto;
+    display: flex;
   }
 
   .text-block-11 {
@@ -3414,19 +3656,79 @@ textarea.w-input, textarea.w-select {
     font-size: 1rem;
   }
 
+  .image-2 {
+    max-width: 25%;
+  }
+
   .form-4 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    flex-flow: row;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr .25fr 1fr;
+    grid-auto-columns: 1fr;
     justify-content: space-between;
+    width: 100%;
+    display: flex;
   }
 
   .button-4 {
-    width: 30%;
+    width: auto;
   }
 
   .progress-week-help-div {
     grid-column-gap: 16px;
     grid-row-gap: 16px;
+  }
+
+  .button-5 {
+    margin-left: auto;
+    display: none;
+  }
+
+  .button-5.trainings-history-button-for-mobile {
+    background-color: var(--color1);
+    color: #333;
+    border-radius: 8px;
+    align-self: flex-start;
+    display: block;
+  }
+
+  .training-history-list-block {
+    border-radius: 20px;
+  }
+
+  .training-history-list-title {
+    font-size: 3rem;
+  }
+
+  .training-history-div {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    border-radius: 16px;
+    order: 1;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    padding-right: 8px;
+    display: grid;
+  }
+
+  .image-5 {
+    width: 32px;
+  }
+
+  .link-block-3 {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .link-block-4 {
+    border-radius: 0 16px;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    inset: 0% 0% auto auto;
   }
 }
 
@@ -3452,8 +3754,9 @@ textarea.w-input, textarea.w-select {
   }
 
   .navbar-section {
+    background-color: var(--navbar-bg);
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     position: fixed;
     inset: auto 0% 0%;
   }
@@ -3461,15 +3764,29 @@ textarea.w-input, textarea.w-select {
   .text-block {
     font-size: .9rem;
     font-weight: 300;
+    line-height: 1.2;
   }
 
   .link-block {
-    padding: 4px 8px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    border-radius: 12px;
+    flex-flow: column;
+    height: auto;
+    padding: 2px 8px;
+  }
+
+  .link-block:hover {
+    border-width: 2px;
+  }
+
+  .link-block.nav-selected {
+    border-radius: 12px;
+    flex-flow: column;
   }
 
   .div-block {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 6px 0;
   }
 
   .newtraining-wrapper {
@@ -3550,6 +3867,7 @@ textarea.w-input, textarea.w-select {
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
     height: 90%;
     max-height: 90%;
     margin-top: auto;
@@ -3631,6 +3949,7 @@ textarea.w-input, textarea.w-select {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     height: 90%;
+    max-height: 90%;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 8px;
@@ -3679,7 +3998,7 @@ textarea.w-input, textarea.w-select {
   .select-field {
     border-width: 3px;
     width: 100%;
-    height: 36px;
+    height: 40px;
     padding: 4px;
     font-size: .9rem;
   }
@@ -3725,7 +4044,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .up-user-card-image-div {
-    width: 140px;
+    width: auto;
     height: 140px;
   }
 
@@ -3779,6 +4098,10 @@ textarea.w-input, textarea.w-select {
     width: 80%;
   }
 
+  .image-2 {
+    max-width: 50%;
+  }
+
   .checkbox {
     margin-top: 0;
   }
@@ -3786,14 +4109,15 @@ textarea.w-input, textarea.w-select {
   .last-3-training-section {
     z-index: 2000;
     background-color: #0006;
-    display: block;
+    display: none;
     position: fixed;
     inset: 0%;
   }
 
   .last-3-training-wrapper {
+    flex-flow: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     height: 100dvh;
     max-height: 100dvh;
     display: flex;
@@ -3808,15 +4132,16 @@ textarea.w-input, textarea.w-select {
   }
 
   .today-trainings-wrapper {
+    flex-flow: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     height: 100dvh;
     max-height: 100dvh;
     display: flex;
   }
 
   .div-block-7 {
-    display: none;
+    display: block;
   }
 
   .button-3 {
@@ -3835,6 +4160,7 @@ textarea.w-input, textarea.w-select {
 
   .button-4 {
     width: 100%;
+    height: 40px;
     font-size: .9rem;
   }
 
@@ -3860,5 +4186,98 @@ textarea.w-input, textarea.w-select {
 
   .image-3 {
     width: 24px;
+  }
+
+  .image-4 {
+    order: -1;
+    width: 20px;
+    display: block;
+  }
+
+  .button-5.trainings-history-button-for-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .training-history-section {
+    display: block;
+  }
+
+  .training-history-list-block {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .training-history-list-title {
+    font-size: 2rem;
+  }
+
+  .training-history-div {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #0003;
+  }
+
+  .text-block-14 {
+    text-align: center;
+    font-size: .9rem;
+  }
+
+  .text-block-15 {
+    font-size: 1.5rem;
+  }
+
+  .text-block-15.training-history-div-note {
+    max-width: 100px;
+    max-height: 50px;
+    font-size: .8rem;
+  }
+
+  .select-field-2 {
+    width: 200px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 1rem;
+  }
+
+  .training-history-list-div {
+    border-radius: 10px;
+    padding: 8px;
+    overflow: auto;
+  }
+
+  .image-5 {
+    width: 28px;
+  }
+
+  .link-block-4 {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #field-6.w-node-f43a9d74-3e60-738e-4344-a4197e18bf5a-3100933c {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  #w-node-d7a0e610-e506-66c2-929a-43349f92c28d-3100933c {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  #w-node-cb60d779-e462-8c9f-1f0b-ceed0e0b85cb-3100933c {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+
+  #w-node-d92754b9-cab3-5ee2-2743-d33383f3df7a-3100933c {
+    grid-area: span 1 / span 2 / span 1 / span 2;
+  }
+
+  #w-node-_7a76c220-2a6b-5f5b-c976-eeda9e4bd2cb-3100933c {
+    grid-area: span 1 / span 1 / span 1 / span 1;
   }
 }

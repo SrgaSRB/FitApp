@@ -4,7 +4,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://fitapp-5hi9.onrender.com/api", 
+    baseURL: "http://localhost:5054/api", 
     headers: {
         "Content-Type": "application/json",
       }

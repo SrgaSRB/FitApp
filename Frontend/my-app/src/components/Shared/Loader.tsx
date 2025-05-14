@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Loader: React.FC = () => {
+interface LoaderProps {
+    bgColor?: string;
+    loaderColor?: string;
+    width? : string;
+    height?: string;
+}
+
+const Loader: React.FC<LoaderProps> = ({bgColor = "white", loaderColor = " #bcf246", width = "100wh", height="100dvh"}) => {
     return (
         <div className="loader-wrapper">
             <svg
@@ -34,14 +41,14 @@ const Loader: React.FC = () => {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        height: 100vh;
-                        width: 100vw;
-                        background-color: white;
+                        height: ${height};
+                        width: ${width};
+                        background-color: ${bgColor};
                     }
 
                     .loader-container {
                         --uib-size: 40px;
-                        --uib-color: #bcf246;
+                        --uib-color: ${loaderColor};
                         --uib-speed: 2s;
                         --uib-bg-opacity: 0;
                         height: var(--uib-size);

@@ -51,5 +51,15 @@ namespace Service.Aplication.Services.Workout
         {
             return _workouts.GetWeeklyStatistics(userId, dto, ct);
         }
+
+        public async Task<List<WorkoutHistoryDto>> GetAllWorkoutsAsync(Guid userId, CancellationToken ct = default)
+        {
+            return await _workouts.GetAllWorkoutsAsync(userId, ct);
+        }
+
+        public async Task<bool> DeleteWorkoutAsync(Guid workoutId, CancellationToken ct = default)
+        {
+            return await _workouts.DeleteWorkoutAsync(workoutId, ct);
+        }
     }
 }

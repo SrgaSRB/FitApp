@@ -145,5 +145,40 @@ namespace Service.Infrastructure.Repositories
             return result;
         }
 
+        public async Task<List<WorkoutHistoryDto>> GetAllWorkoutsAsync(Guid userId, CancellationToken ct = default)
+        {
+            var workoutList = await _context.Workouts
+                .Where(w => w.UserId == userId)
+                .Select(w => new WorkoutHistoryDto
+                {
+                    Id = w.Id,
+                    CaloriesBurned = w.CaloriesBurned,
+                    DurationMinutes = w.DurationMinutes,
+                    Fatigue = w.Fatigue,
+                    Intensity = w.Intensity,
+                    Note = w.Note,
+                    StartTime = w.StartTime.UtcDateTime,
+                    Type = w.Type
+                }).ToListAsync();
+
+            return workoutList;
+        }
+
+        public async Task<bool> DeleteWorkoutAsync(Guid workoutId, CancellationToken ct = default)
+        {
+            var workout = await _context.Workouts
+                .FirstOrDefaultAsync(w => w.Id == workoutId);
+
+            if(workout == null)
+            {
+                return false;
+            }
+
+            _context.Workouts.Remove(workout);
+
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

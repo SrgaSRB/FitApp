@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\infrastructure\\repositories\\workoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:infrastructure\\repositories\\workoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\weeklystatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\dtos\\workout\\weeklystatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\workoutsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\dtos\\workout\\workoutsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\services\\workout\\workoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\services\\workout\\workoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\infrastructure\\repositories\\workoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:infrastructure\\repositories\\workoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\interfaces\\repositories\\iworkoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\interfaces\\repositories\\iworkoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\interfaces\\services\\iworkoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\interfaces\\services\\iworkoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\workouthistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\dtos\\workout\\workouthistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\workoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,24 +47,16 @@
       "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:domain\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\weeklystatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\dtos\\workout\\weeklystatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\workoutsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\dtos\\workout\\workoutsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\dtos\\workout\\progressdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\dtos\\workout\\progressdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\interfaces\\services\\iworkoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\interfaces\\services\\iworkoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\aplication\\interfaces\\repositories\\iworkoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:aplication\\interfaces\\repositories\\iworkoutrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6EAD0FE-F5D5-4D39-820D-B018D25DE567}|Service.csproj|c:\\users\\srdjan\\desktop\\projects\\wedosoftware\\backend\\service\\domain\\enums\\workouttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,84 +154,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 183,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "WorkoutRepository.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Repositories\\WorkoutRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\WorkoutRepository.cs",
               "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Repositories\\WorkoutRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repositories\\WorkoutRepository.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAcwHAAAAAMAAAA",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAkwJMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T00:56:44.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IWorkoutRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
-              "RelativeDocumentMoniker": "Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
-              "RelativeToolTip": "Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "WorkoutService.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Services\\Workout\\WorkoutService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Services\\Workout\\WorkoutService.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Services\\Workout\\WorkoutService.cs",
+              "RelativeToolTip": "Aplication\\Services\\Workout\\WorkoutService.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAowDMAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T00:56:19.593Z"
+              "WhenOpened": "2025-05-12T00:42:26.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
+              "Title": "Workout.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Models\\Workout.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Workout.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Models\\Workout.cs",
+              "RelativeToolTip": "Domain\\Models\\Workout.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T20:09:04.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "IWorkoutService.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Services\\IWorkoutService.cs",
               "RelativeDocumentMoniker": "Aplication\\Interfaces\\Services\\IWorkoutService.cs",
               "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Services\\IWorkoutService.cs",
               "RelativeToolTip": "Aplication\\Interfaces\\Services\\IWorkoutService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T00:40:05.824Z"
+              "WhenOpened": "2025-05-12T00:40:05.824Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "IWorkoutRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\Repositories\\IWorkoutRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:56:19.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "WorkoutController.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\WorkoutController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\WorkoutController.cs",
               "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\WorkoutController.cs",
               "RelativeToolTip": "API\\Controllers\\WorkoutController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAwwEUAAAAAAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAcwGEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T00:39:20.385Z"
+              "WhenOpened": "2025-05-12T00:39:20.385Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAmwFwAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T21:34:33.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeeklyStatistic.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
-              "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
-              "RelativeToolTip": "Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T14:17:35.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "WorkoutDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WorkoutDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\WorkoutDto.cs",
@@ -235,23 +244,51 @@
               "RelativeToolTip": "Aplication\\DTOs\\Workout\\WorkoutDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T22:45:55.387Z"
+              "WhenOpened": "2025-05-12T22:45:55.387Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProgressDateDto.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
-              "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
-              "RelativeToolTip": "Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAgAAAA",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "API\\Controllers\\UserController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAwD4AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:37:20.029Z"
+              "WhenOpened": "2025-05-12T15:27:44.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAmwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T20:29:05.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAmwB0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T21:34:33.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "WorkoutSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WorkoutSummaryDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\WorkoutSummaryDto.cs",
@@ -263,19 +300,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WorkoutService.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Services\\Workout\\WorkoutService.cs",
-              "RelativeDocumentMoniker": "Aplication\\Services\\Workout\\WorkoutService.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Services\\Workout\\WorkoutService.cs",
-              "RelativeToolTip": "Aplication\\Services\\Workout\\WorkoutService.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAwwDEAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "WorkoutHistoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WorkoutHistoryDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\WorkoutHistoryDto.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WorkoutHistoryDto.cs",
+              "RelativeToolTip": "Aplication\\DTOs\\Workout\\WorkoutHistoryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T00:42:26.994Z"
+              "WhenOpened": "2025-05-14T19:13:27.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
+              "Title": "ProgressDateDto.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
+              "RelativeToolTip": "Aplication\\DTOs\\Workout\\ProgressDateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T13:37:20.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WeeklyStatistic.cs",
+              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
+              "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
+              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
+              "RelativeToolTip": "Aplication\\DTOs\\Workout\\WeeklyStatistic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:17:35.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Models\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
@@ -287,31 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Workout.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Models\\Workout.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Workout.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Models\\Workout.cs",
-              "RelativeToolTip": "Domain\\Models\\Workout.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T20:09:04.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAkwCAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T20:29:05.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
@@ -323,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "CreateWorkoutDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Workout\\CreateWorkoutDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\Workout\\CreateWorkoutDto.cs",
@@ -335,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
@@ -347,19 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "API\\Controllers\\UserController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAwD4AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T15:27:44.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "WorkoutType.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Enums\\WorkoutType.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\WorkoutType.cs",
@@ -371,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "UpdateUserDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\User\\UpdateUserDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\User\\UpdateUserDto.cs",
@@ -383,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Auth\\LoginDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\Auth\\LoginDto.cs",
@@ -395,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "TokenDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Auth\\TokenDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\Auth\\TokenDto.cs",
@@ -407,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Aplication\\Interfaces\\Repositories\\IUserRepository.cs",
@@ -419,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "Aplication\\Interfaces\\Services\\IAuthService.cs",
@@ -431,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Services\\IUserService.cs",
               "RelativeDocumentMoniker": "Aplication\\Interfaces\\Services\\IUserService.cs",
@@ -443,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Services\\UserService\\UserService.cs",
               "RelativeDocumentMoniker": "Aplication\\Services\\UserService\\UserService.cs",
@@ -455,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Gender.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Domain\\Enums\\Gender.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\Gender.cs",
@@ -467,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "JwtGenerator.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Infrastructure\\Security\\JwtGenerator.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Security\\JwtGenerator.cs",
@@ -479,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Services\\Auth\\AuthService.cs",
               "RelativeDocumentMoniker": "Aplication\\Services\\Auth\\AuthService.cs",
@@ -491,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "UserInfoDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\User\\UserInfoDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\User\\UserInfoDto.cs",
@@ -503,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "LoginValidator.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Validators\\Auth\\LoginValidator.cs",
               "RelativeDocumentMoniker": "Aplication\\Validators\\Auth\\LoginValidator.cs",
@@ -515,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "CreateUserValidator.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Validators\\Auth\\CreateUserValidator.cs",
               "RelativeDocumentMoniker": "Aplication\\Validators\\Auth\\CreateUserValidator.cs",
@@ -527,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "IJwtGenerator.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Interfaces\\Security\\IJwtGenerator.cs",
               "RelativeDocumentMoniker": "Aplication\\Interfaces\\Security\\IJwtGenerator.cs",
@@ -539,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "CreateUserDto.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\DTOs\\Auth\\CreateUserDto.cs",
               "RelativeDocumentMoniker": "Aplication\\DTOs\\Auth\\CreateUserDto.cs",
@@ -551,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -563,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "C:\\Users\\SRDJAN\\Desktop\\Projects\\WeDoSoftware\\Backend\\Service\\Aplication\\Configuration\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Aplication\\Configuration\\JwtSettings.cs",

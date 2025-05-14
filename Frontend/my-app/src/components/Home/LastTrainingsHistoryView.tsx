@@ -12,12 +12,12 @@ interface TrainingHistory {
     note?: string | null;
 }
 
-interface TrainingHistoryViewProps {
+interface LastTrainingsHistoryViewProps {
     trainingHistory: TrainingHistory[];
     onClose(): void;
 }
 
-const TrainingHistoryView: React.FC<TrainingHistoryViewProps> = ({ trainingHistory, onClose }) => {
+const LastTrainingsHistoryView: React.FC<LastTrainingsHistoryViewProps> = ({ trainingHistory, onClose }) => {
 
     return (
         <section className="last-3-training-section" onClick={onClose}>
@@ -26,7 +26,7 @@ const TrainingHistoryView: React.FC<TrainingHistoryViewProps> = ({ trainingHisto
                     <div className="home-training-history-div-block" onClick={(e) => e.stopPropagation()}>
 
                         <a className="link-block-2" onClick={onClose}>
-                            <img src="assets/images/x-02.svg" loading="lazy" alt="" className="image-2" />
+                            <img src="assets/icons/x-white-100.svg" loading="lazy" alt="" className="image-3" />
                         </a>
 
                         <div className="text-block-6">Zadnja 3 treninga</div>
@@ -35,7 +35,7 @@ const TrainingHistoryView: React.FC<TrainingHistoryViewProps> = ({ trainingHisto
                             {trainingHistory.length === 0 ? (
                                 <div className="today-trainings-lis-div-no-trainings">
                                     <div>Nemate treninga za danas</div>
-                                    <Link to="/new-workout">Kreiraj svoj prvi trening!</Link>
+                                    <Link to="/new-workout" className="link-3">Kreiraj svoj prvi trening!</Link>
                                 </div>
                             ) : (
                                 trainingHistory.map((workout) => (
@@ -70,4 +70,4 @@ const TrainingHistoryView: React.FC<TrainingHistoryViewProps> = ({ trainingHisto
 
 }
 
-export default TrainingHistoryView;
+export default LastTrainingsHistoryView;

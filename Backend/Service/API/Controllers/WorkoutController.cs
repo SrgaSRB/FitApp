@@ -81,6 +81,28 @@ namespace Service.API.Controllers
             return Ok(result);
         }
 
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GetWorkouts(CancellationToken ct)
+        {
+            Guid userId = Guid.Parse(User.FindFirstValue(JwtRegisteredClaimNames.Sub)!);
+
+            var workouts = await _workout.GetAllWorkoutsAsync(userId, ct);
+
+            return Ok(workouts);
+        }
+
+        [Authorize]
+        [HttpDelete("{workoutId}")]
+        public async Task<IActionResult> DeleteWorkout(Guid workoutId, CancellationToken ct)
+        {
+            if(await _workout.DeleteWorkoutAsync(workoutId, ct))
+                return Ok();
+
+            return NotFound();
+
+        }
+
 
     }
 }

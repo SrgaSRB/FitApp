@@ -17,7 +17,7 @@ interface TodayTrainingsViewProps {
     onClose(): void;
 }
 
-const todayTrainingsView: React.FC<TodayTrainingsViewProps> = ({ todayTrainings, onClose }) => {
+const TodayTrainingsView: React.FC<TodayTrainingsViewProps> = ({ todayTrainings, onClose }) => {
 
     return (
         <section className="today-trainings-section" onClick={onClose}>
@@ -26,7 +26,7 @@ const todayTrainingsView: React.FC<TodayTrainingsViewProps> = ({ todayTrainings,
                     <div className="today-trainings-div-block" onClick={(e) => e.stopPropagation()}>
 
                         <a className="link-block-2" onClick={onClose}>
-                            <img src="assets/images/x-02.svg" loading="lazy" alt="" className="image-2" />
+                            <img src="assets/icons/x-white-100.svg" loading="lazy" alt="" className="image-3" />
                         </a>
 
                         <div className="text-block-6">Današnji treninzi</div>
@@ -36,7 +36,7 @@ const todayTrainingsView: React.FC<TodayTrainingsViewProps> = ({ todayTrainings,
                             {todayTrainings.length === 0 ? (
                                 <div className="today-trainings-lis-div-no-trainings">
                                     <div>Nemate treninga za danas</div>
-                                    <Link to="/new-workout">Dodaj novi trening</Link>
+                                    <Link to="/new-workout" className="link-3">Dodaj novi trening</Link>
                                 </div>
                             ) : (
                                 todayTrainings.map((workout) => (
@@ -74,4 +74,4 @@ const todayTrainingsView: React.FC<TodayTrainingsViewProps> = ({ todayTrainings,
 
 }
 
-export default todayTrainingsView;
+export default TodayTrainingsView;
