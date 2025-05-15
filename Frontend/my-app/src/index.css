@@ -3226,6 +3226,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .link-block-4 {
+  cursor: pointer;
   background-color: #ff4040;
   border-radius: 0 20px 20px 0;
   justify-content: center;
@@ -3233,9 +3234,14 @@ textarea.w-input, textarea.w-select {
   width: 60px;
   padding-left: 12px;
   padding-right: 12px;
+  transition: all .3s;
   display: flex;
   position: absolute;
   inset: 0% 0% 0% auto;
+}
+
+.link-block-4:hover {
+  background-color: #d93636;
 }
 
 @media screen and (max-width: 991px) {
@@ -3658,6 +3664,10 @@ textarea.w-input, textarea.w-select {
 
   .image-2 {
     max-width: 25%;
+  }
+
+  .div-block-7 {
+    display: none;
   }
 
   .form-4 {
@@ -4109,7 +4119,7 @@ textarea.w-input, textarea.w-select {
   .last-3-training-section {
     z-index: 2000;
     background-color: #0006;
-    display: none;
+    display: block;
     position: fixed;
     inset: 0%;
   }
@@ -4170,6 +4180,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .link-block-2 {
+    cursor: pointer;
     border: 3px solid #0000;
     border-radius: 50%;
     margin-top: 8px;
