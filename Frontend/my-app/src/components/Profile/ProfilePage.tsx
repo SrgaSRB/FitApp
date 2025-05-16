@@ -107,7 +107,7 @@ const UserPage = () => {
             await api.get(`/user/check-email/${newEmail}`);
         } catch (error: any) {
             if (error.response?.status === 400) {
-                setUsernameError("Email je zauzet.");
+                setEmailError("Email je zauzet.");
             }
             console.error("Error checking username availability:", error);
         }

@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Raven.Client.Exceptions;
 using Service.Aplication.Configuration;
+using Service.Aplication.Exceptions;
 using Service.Aplication.Interfaces.Repositories;
 using Service.Aplication.Interfaces.Security;
 using Service.Aplication.Interfaces.Services;
@@ -41,6 +41,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<CreateUserValidator>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -50,7 +51,6 @@ builder.Services.AddScoped<IWorkoutService, WorkoutService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
-builder.Services.AddControllers().AddFluentValidation();
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 builder.Services.AddSingleton<IJwtGenerator, JwtGenerator>();
@@ -93,6 +93,7 @@ app.UseExceptionHandler(cfg =>
         var ex = context.Features.Get<IExceptionHandlerFeature>()?.Error;
         var code = ex switch
         {
+            NotFoundException => StatusCodes.Status404NotFound,
             ConflictException => StatusCodes.Status409Conflict,
             ValidationException => StatusCodes.Status400BadRequest,
             _ => StatusCodes.Status500InternalServerError

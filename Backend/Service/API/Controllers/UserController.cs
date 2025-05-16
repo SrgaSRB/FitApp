@@ -30,9 +30,6 @@ namespace Service.API.Controllers
 
             var userInfo = await _userService.GetUserInfoAsync(userId, ct);
 
-            if (userInfo == null)
-                return NotFound();
-
             return Ok(userInfo);
         }
 

@@ -213,7 +213,13 @@ const HomePage = () => {
                                             </div>
                                             <div className="text-block-5"><span className="text-span-3">Kalorije:</span> {workout.caloriesBurned}kcal</div>
                                             <div className="text-block-5"><span className="text-span-3">Vreme početka: </span>
-                                                {new Date(workout.startTime).toLocaleTimeString([], { day: 'numeric', month: 'numeric', year: '2-digit', hour: '2-digit', minute: '2-digit' })}
+                                                {new Date(workout.startTime).toLocaleString('sr-RS', {
+                                                    day: '2-digit',
+                                                    month: '2-digit',
+                                                    year: '2-digit',
+                                                    hour: '2-digit',
+                                                    minute: '2-digit'
+                                                })}
                                             </div>
                                             <div className="today-training-note-div">
                                                 <div className="text-block-5 note-text-width"><span className="text-span-3">Beleška:</span> <br />‍</div>
@@ -231,7 +237,7 @@ const HomePage = () => {
 
                                     {workoutLast3.length === 0 && (
                                         <div className="today-trainings-lis-div-no-trainings">
-                                            <div>Nemate treninga za danas</div>
+                                            <div>Nemate evidentiranih treninga</div>
                                             <Link to="/new-workout" className="link-3">Kreiraj svoj prvi trening!</Link>
                                         </div>
                                     )}
@@ -248,7 +254,13 @@ const HomePage = () => {
                                             <div className="text-block-5"><span className="text-span-3">Kalorije:</span> {workout.caloriesBurned}kcal</div>
                                             <div className="text-block-5">
                                                 <span className="text-span-3">Vreme početka: </span>
-                                                {new Date(workout.startTime).toLocaleTimeString([], { day: 'numeric', month: 'numeric', year: '2-digit', hour: '2-digit', minute: '2-digit' })}
+                                                {new Date(workout.startTime).toLocaleString('sr-RS', {
+                                                    day: '2-digit',
+                                                    month: '2-digit',
+                                                    year: '2-digit',
+                                                    hour: '2-digit',
+                                                    minute: '2-digit'
+                                                })}
                                             </div>
                                             <div className="today-training-note-div">
                                                 <div className="text-block-5 note-text-width"><span className="text-span-3">Beleška:</span> <br /></div>
@@ -264,7 +276,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            
+
         </>
     );
 }

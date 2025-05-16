@@ -2380,6 +2380,10 @@ textarea.w-input, textarea.w-select {
   border-color: #000;
 }
 
+.submit-button.top-margin-20 {
+  margin-top: 20px;
+}
+
 .nt-form-data-wrapper {
   background-color: #fff;
   border-radius: 16px;
@@ -2390,6 +2394,10 @@ textarea.w-input, textarea.w-select {
 
 .nt-form-data-wrapper:hover {
   box-shadow: 0 2px 5px 3px #0003;
+}
+
+.nt-form-data-wrapper.bottom-margin-0 {
+  margin-bottom: 0;
 }
 
 .text-field-2 {
@@ -2987,12 +2995,8 @@ textarea.w-input, textarea.w-select {
   inset: 0%;
 }
 
-.today-trainings-section {
+.today-trainings-section, .div-block-7 {
   display: none;
-}
-
-.div-block-7 {
-  display: block;
 }
 
 .button-2 {

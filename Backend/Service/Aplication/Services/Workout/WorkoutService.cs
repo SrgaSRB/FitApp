@@ -1,4 +1,5 @@
-﻿using Service.Aplication.DTOs.Workout;
+﻿using FluentValidation;
+using Service.Aplication.DTOs.Workout;
 using Service.Aplication.Interfaces.Repositories;
 using Service.Aplication.Interfaces.Services;
 
@@ -7,10 +8,12 @@ namespace Service.Aplication.Services.Workout
     public class WorkoutService : IWorkoutService
     {
         private readonly IWorkoutRepository _workouts;
+        private readonly IValidator<CreateWorkoutDto> _createValidator;
 
-        public WorkoutService(IWorkoutRepository workouts)
+        public WorkoutService(IWorkoutRepository workouts, IValidator<CreateWorkoutDto> createValidator)
         {
             _workouts = workouts;
+            _createValidator = createValidator;
         }
 
         public async Task<WorkoutSummaryDto> WorkoutSum(Guid userId, CancellationToken ct)
@@ -44,10 +47,12 @@ namespace Service.Aplication.Services.Workout
 
         public async Task<bool> AddWorkoutAsyncs(Guid userId, CreateWorkoutDto dto, CancellationToken ct)
         {
+            await _createValidator.ValidateAndThrowAsync(dto, ct);
+
             return await _workouts.AddWorkoutAsync(userId, dto, ct);
         }
 
-        public Task<List<WeeklyStatistic>> GetWeeklyStatistics(Guid userId, ProgressDateDto dto, CancellationToken ct = default)
+        public Task<List<WeeklyStatistic>> GetWeeklyStatisticsAsync(Guid userId, ProgressDateDto dto, CancellationToken ct = default)
         {
             return _workouts.GetWeeklyStatistics(userId, dto, ct);
         }

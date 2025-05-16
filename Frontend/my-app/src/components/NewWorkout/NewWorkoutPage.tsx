@@ -1,17 +1,21 @@
 import React from "react";
 import api from "../../api";
+import Loader from "../Shared/Loader";
 
 const NewWorkoutPage = () => {
 
     const [selectedExercise, setSelectedExercise] = React.useState("Cardio");
     const [intensity, setIntensity] = React.useState<number | null>(null);
     const [fatigue, setFatigue] = React.useState<number | null>(null);
-    const [dugartionHours, setDurationHours] = React.useState<number | null>(null);
-    const [durationMinutes, setDurationMinutes] = React.useState<number | null>(null);
+    const [dugartionHours, setDurationHours] = React.useState<number>(0);
+    const [durationMinutes, setDurationMinutes] = React.useState<number>(0);
     const [calories, setCalories] = React.useState<number | null>(null);
     const [manualCalories, setManualCalories] = React.useState(false);
     const [startTime, setStartTime] = React.useState<string | null>(null);
     const [note, setNote] = React.useState<string | null>(null);
+
+    const [error, setError] = React.useState("");
+
 
     const scale = Array.from({ length: 10 }, (_, i) => i + 1);
 
@@ -19,17 +23,24 @@ const NewWorkoutPage = () => {
 
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        
+
         e.preventDefault();
 
         setLoading(true);
 
         if (intensity === null || fatigue === null || dugartionHours === null || durationMinutes === null) {
-            alert("Molimo vas popunite sva obavezna polja.");
+            setError("Molimo vas popunite sva obavezna polja.");
+            setLoading(false);
             return;
         }
 
         const totalDurationMinutes = durationMinutes + (dugartionHours ? dugartionHours * 60 : 0);
+
+        if (totalDurationMinutes === 0) {
+            setError("Ukupno vreme treninga mora biti vece od jednog minuta");
+            setLoading(false);
+            return;
+        }
 
         const autoCalories = manualCalories
             ? calories
@@ -56,20 +67,20 @@ const NewWorkoutPage = () => {
                 setSelectedExercise("Cardio");
                 setIntensity(null);
                 setFatigue(null);
-                setDurationHours(null);
-                setDurationMinutes(null);
+                setDurationHours(0);
+                setDurationMinutes(0);
                 setCalories(null);
                 setManualCalories(false);
                 setStartTime(null);
                 setNote(null);
             } else {
-                alert("Greška prilikom kreiranja treninga.");
+                setError("Greška prilikom kreiranja treninga.");
             }
 
         } catch (error) {
             console.error("Error creating workout:", error);
-            alert("Greška prilikom kreiranja treninga.");
-        }finally{
+            setError("Greška prilikom kreiranja treninga.");
+        } finally {
             setLoading(false);
         }
     };
@@ -161,17 +172,32 @@ const NewWorkoutPage = () => {
                             <div className="nt-form-data-wrapper"><label className="field-label">Trajanje</label>
                                 <div className="nt-form-duration-div">
                                     <div className="nt-form-duration-div-hours">
-                                        <input className="text-field w-input" maxLength={256} placeholder="Unesi sate" type="number"
-                                            value={dugartionHours || ""}
-                                            onChange={(e) => setDurationHours(Number(e.target.value))}
+                                        <input
+                                            className="text-field w-input"
+                                            maxLength={256}
+                                            placeholder="Unesi sate"
+                                            type="number"
+                                            value={dugartionHours === 0 ? "" : dugartionHours}
+                                            onChange={(e) => {
+                                                const val = e.target.value;
+                                                setDurationHours(val === "" ? 0 : Number(val));
+                                            }}
+                                            min={0}
                                         />
                                         <div className="text-block-4">h</div>
                                     </div>
                                     <div className="nt-form-duration-div-hours">
-                                        <input className="text-field text-field-min w-input" maxLength={256} placeholder="Unesi minute" type="number"
-                                            value={durationMinutes || ""}
-                                            onChange={(e) => setDurationMinutes(Number(e.target.value))}
-                                            required
+                                        <input
+                                            className="text-field text-field-min w-input"
+                                            maxLength={256}
+                                            placeholder="Unesi minute"
+                                            type="number"
+                                            value={durationMinutes === 0 ? "" : durationMinutes}
+                                            onChange={(e) => {
+                                                const val = e.target.value;
+                                                setDurationMinutes(val === "" ? 0 : Number(val));
+                                            }}
+                                            min={0}
                                         />
                                         <div className="text-block-4">min</div>
                                     </div>
@@ -214,15 +240,19 @@ const NewWorkoutPage = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="nt-form-data-wrapper"><label className="field-label">Dodaj belešku <span className="text-span">(opciono)</span></label>
-                                <textarea placeholder="Example Text" maxLength={2048} className="textarea w-input"
+                            <div className="nt-form-data-wrapper bottom-margin-0"><label className="field-label">Dodaj belešku <span className="text-span">(opciono)</span></label>
+                                <textarea placeholder="Unesite belešku(opciono)" maxLength={2048} className="textarea w-input"
                                     value={note || ""}
                                     onChange={(e) => setNote(e.target.value)}
-                                    required
                                 >
                                 </textarea>
                             </div>
-                            <input type="submit" data-wait="Please wait..." className="submit-button w-button" value="Kreiraj trening" />
+                            {error && <div className="error-text" style={{ marginBottom: "15px", fontSize: "1.25rem" }}>{error}</div>}
+                            {loading == true ? (
+                                <Loader bgColor="transparent" width="100%" height="100%" />
+                            ) : (
+                                <input type="submit" data-wait="Please wait..." className="submit-button w-button top-margin-20" value="Kreiraj trening" />
+                            )}
                         </form>
                     </div>
                 </div>

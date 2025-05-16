@@ -1,13 +1,12 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Service.Aplication.DTOs.Auth;
 using Service.Aplication.Interfaces.Repositories;
 using Service.Aplication.Interfaces.Security;
 using Service.Aplication.Interfaces.Services;
 using Service.Domain.Enums;
 using Service.Domain.Models;
+using Service.Aplication.Exceptions;
 
 namespace Service.Aplication.Services.Auth
 {
@@ -16,28 +15,32 @@ namespace Service.Aplication.Services.Auth
         private readonly IUserRepository _userRepository;
         private readonly IJwtGenerator _jwt;
         //private readonly IMapper _mapper;
-        private readonly IValidator<LoginDto> _validator;
+        private readonly IValidator<LoginDto> _loginValidator;
+        private readonly IValidator<CreateUserDto> _createUserValidator;
 
 
-        public AuthService(IUserRepository userRepository, IMapper mapper, IJwtGenerator jwt, IValidator<LoginDto> validator)
+        public AuthService(IUserRepository userRepository, IMapper mapper, IJwtGenerator jwt, IValidator<LoginDto> loginValidator, IValidator<CreateUserDto> createUserValidator)
         {
             _userRepository = userRepository;
             _jwt = jwt;
-            _validator = validator;
+            _loginValidator = loginValidator;
+            _createUserValidator = createUserValidator;
             //_mapper = mapper;
 
         }
 
         public async Task RegisterUserAsync(CreateUserDto dto, CancellationToken ct = default)
         {
+            await _createUserValidator.ValidateAndThrowAsync(dto, ct);
+
             if (await _userRepository.UsernameExistAsync(dto.Username))
             {
-                throw new Exception("Username already exists. Please choose another one.");
+                throw new ConflictException("Username already exists.");
             }
 
             if (await _userRepository.EmailExistAsync(dto.Email))
             {
-                throw new Exception("Email already exists. Please choose another one.");
+                throw new ConflictException("Email already exists.");
             }
 
             //var user = _mapper.Map<User>(dto);
@@ -56,11 +59,7 @@ namespace Service.Aplication.Services.Auth
                 Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
             };
 
-            user.Id = Guid.NewGuid();
-            user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password);
-
             await _userRepository.AddAsync(user, ct);
-
         }
 
         public async Task<bool> IsUsernameAvailableAsync(string username, CancellationToken ct = default)
@@ -75,7 +74,7 @@ namespace Service.Aplication.Services.Auth
 
         public async Task<TokenDto> LoginUserAsync(LoginDto dto, CancellationToken ct = default)
         {
-            await _validator.ValidateAndThrowAsync(dto, ct);
+            await _loginValidator.ValidateAndThrowAsync(dto, ct);
 
             bool isEmail = dto.UsernameOrEmail.Contains("@");
 
@@ -84,10 +83,10 @@ namespace Service.Aplication.Services.Auth
                 : await _userRepository.GetUserByUsernameAsync(dto.UsernameOrEmail, ct);
 
             if (user is null)
-                throw new UnauthorizedAccessException("Invalid credentials");
+                throw new Exceptions.UnauthorizedAccessException("Invalid credentials");
 
             if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
-                throw new UnauthorizedAccessException("Invalid credentials");
+                throw new Exceptions.UnauthorizedAccessException("Invalid credentials");
 
             return _jwt.GenerateToken(user);
 

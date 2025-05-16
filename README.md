@@ -1,25 +1,29 @@
 # FitApp
 
-FitApp is a simple fitness tracking application that allows users to register, log in, and manage their workouts. The app enables users to add, view, update, and delete workouts, as well as track progress over time.
+**FitApp** is a lightweight fitness tracking web application designed for personal workout management and progress monitoring. The app provides essential functionalities like user authentication, workout tracking, progress statistics, and personal profile management.
 
-## Features
-- User registration & login (JWT authentication)
-- Protected routes with auto-logout on token expiration
-- CRUD operations for workouts (add, list, delete)
-- Progress tracking (weekly statistics)
-- Responsive design (deployed on Vercel)
-- PostgreSQL database hosted on Neon.tech
+## ✨ Features
+- ✅ **User Registration & Login** (JWT Authentication)
+- ✅ **Protected Routes** with automatic logout on token expiration
+- ✅ **Add / View / Delete Workouts** (Calories, Duration, Intensity, Fatigue)
+- ✅ **Progress Tracking** by weekly statistics
+- ✅ **Profile Management** (update user info, live username/email availability check)
+- ✅ **Workout History View** with filters and sorting
+- ✅ **Responsive Design** optimized for mobile & desktop
+- ✅ **Deployed on Vercel (Frontend)** with live API & DB connections
 
-## Technologies Used
-- **Frontend**: React, TypeScript, Axios, React Router
-- **Backend**: ASP.NET Core Web API, Entity Framework Core, PostgreSQL
-- **Deployment**: Vercel (Frontend), Render.com (Backend), Neon.tech (Database)
-- **Authentication**: JWT Bearer Tokens
+## 🛠️ Technologies Used
+| Layer        | Tech Stack                                                   |
+|--------------|--------------------------------------------------------------|
+| **Frontend** | React + TypeScript, React Router, Axios                      |
+| **Backend**  | ASP.NET Core Web API, Entity Framework Core, PostgreSQL       |
+| **Database** | PostgreSQL (Neon.tech cloud-hosted)                          |
+| **Auth**     | JWT Bearer Token (with expiration & auto-logout handling)     |
+| **Deployment**| Vercel (Frontend), Render.com (Backend API), Neon.tech (DB) |
 
-## Demo
-Frontend deployed on Vercel:  
-🔗 [https://fit-app-gamma.vercel.app/login](https://fit-app-gamma.vercel.app/login)
+## 🔗 Live Demo
+- **Frontend (Vercel):** [https://fit-app-gamma.vercel.app/login](https://fit-app-gamma.vercel.app/login)
+- **Note:** Backend is hosted on Render, which might have a **cold start delay (~20-30s)** after inactivity.
 
-Backend hosted on Render (cold start ~20-30 sec after inactivity).
-
-## Database Connection (Neon.tech)
+## 🗄️ Database Connection
+PostgreSQL database is hosted on **Neon.tech** (serverless cloud DB with pooling).

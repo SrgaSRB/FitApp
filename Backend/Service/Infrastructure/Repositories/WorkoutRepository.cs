@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Service.Aplication.DTOs.Workout;
+using Service.Aplication.Exceptions;
 using Service.Aplication.Interfaces.Repositories;
 using Service.Domain.Models;
 using Service.Infrastructure.Data;
@@ -24,6 +25,12 @@ namespace Service.Infrastructure.Repositories
                 .ToListAsync();
 
             return workoutList;
+        }
+
+        private DateTime GetStartOfWeek(DateTime date)
+        {
+            int diff = (7 + (date.DayOfWeek - DayOfWeek.Monday)) % 7;
+            return date.Date.AddDays(-diff);
         }
 
         public async Task<List<WorkoutDto>> GetLastXWorkoutsAsync(Guid userId, int x, CancellationToken ct = default)
@@ -79,7 +86,7 @@ namespace Service.Infrastructure.Repositories
 
             if (user == null)
             {
-                return false;
+                throw new NotFoundException($"User with ID {userId} not found.");
             }
 
             var workout = new Workout
@@ -107,39 +114,44 @@ namespace Service.Infrastructure.Repositories
             var startDate = new DateTime(int.Parse(dto.Year), int.Parse(dto.Month), 1, 0, 0, 0, DateTimeKind.Utc);
             var endDate = startDate.AddMonths(1).AddDays(-1);
 
-            var firstDayOfWeek = startDate.AddDays(-(int)startDate.DayOfWeek);
-            var lastDayOfWeek = endDate.AddDays(6 - (int)endDate.DayOfWeek);
+            var firstDayOfWeek = startDate.AddDays(-(int)startDate.DayOfWeek + 1);
+            var lastDayOfWeek = endDate.AddDays(6 - (int)endDate.DayOfWeek + 1);
+
+            var workouts = await _context.Workouts
+                .Where(w => w.UserId == userId && w.StartTime >= firstDayOfWeek && w.StartTime <= lastDayOfWeek)
+                .ToListAsync(ct);
+
+            var statsByWeek = workouts
+                .GroupBy(w => GetStartOfWeek(w.StartTime.UtcDateTime))
+                .ToDictionary(
+                    g => g.Key,
+                    g => new
+                    {
+                        TotalTrainings = g.Count(),
+                        TotalBurnedCalories = g.Sum(w => w.CaloriesBurned),
+                        TotalTrainingTimeMinutes = g.Sum(w => w.DurationMinutes),
+                        AvgIntensity = g.Average(w => w.Intensity),
+                        AvgFatigue = g.Average(w => w.Fatigue)
+                    });
 
             var weeks = Enumerable.Range(0, (int)((lastDayOfWeek - firstDayOfWeek).TotalDays / 7) + 1)
-                .Select(i => new
+                .Select(i =>
                 {
-                    Index = i,
-                    Start = firstDayOfWeek.AddDays(i * 7),
-                    End = firstDayOfWeek.AddDays(i * 7 + 6)
+                    var start = firstDayOfWeek.AddDays(i * 7);
+                    var end = start.AddDays(6);
+                    return new { Start = start, End = end };
                 })
                 .ToList();
-
-            var statsByWeek = await _context.Workouts
-                .Where(w => w.UserId == userId && w.StartTime >= firstDayOfWeek && w.StartTime <= lastDayOfWeek)
-                .GroupBy(w => (int)((w.StartTime - firstDayOfWeek).TotalDays / 7))
-                .ToDictionaryAsync(g => g.Key, g => new
-                {
-                    TotalTrainings = g.Count(),
-                    TotalBurnedCalories = g.Sum(w => w.CaloriesBurned),
-                    TotalTrainingTimeMinutes = g.Sum(w => w.DurationMinutes),
-                    AvgIntensity = g.Average(w => w.Intensity),
-                    AvgFatigue = g.Average(w => w.Fatigue)
-                }, ct);
 
             var result = weeks.Select(w => new WeeklyStatistic
             {
                 StartWeek = w.Start,
                 EndWeek = w.End,
-                TotalTrainings = statsByWeek.TryGetValue(w.Index, out var s) ? s.TotalTrainings : 0,
-                TotalBurnedCalories = statsByWeek.TryGetValue(w.Index, out s) ? s.TotalBurnedCalories : 0,
-                TotalTrainingTimeMinutes = statsByWeek.TryGetValue(w.Index, out s) ? s.TotalTrainingTimeMinutes : 0,
-                AverageTrainingIntensity = statsByWeek.TryGetValue(w.Index, out s) ? s.AvgIntensity : 0,
-                AverageTrainingFatigue = statsByWeek.TryGetValue(w.Index, out s) ? s.AvgFatigue : 0
+                TotalTrainings = statsByWeek.TryGetValue(w.Start, out var s) ? s.TotalTrainings : 0,
+                TotalBurnedCalories = statsByWeek.TryGetValue(w.Start, out s) ? s.TotalBurnedCalories : 0,
+                TotalTrainingTimeMinutes = statsByWeek.TryGetValue(w.Start, out s) ? s.TotalTrainingTimeMinutes : 0,
+                AverageTrainingIntensity = statsByWeek.TryGetValue(w.Start, out s) ? s.AvgIntensity : 0,
+                AverageTrainingFatigue = statsByWeek.TryGetValue(w.Start, out s) ? s.AvgFatigue : 0
             }).ToList();
 
             return result;
@@ -169,9 +181,9 @@ namespace Service.Infrastructure.Repositories
             var workout = await _context.Workouts
                 .FirstOrDefaultAsync(w => w.Id == workoutId);
 
-            if(workout == null)
+            if (workout == null)
             {
-                return false;
+                throw new NotFoundException($"Workout with ID {workoutId} not found.");
             }
 
             _context.Workouts.Remove(workout);

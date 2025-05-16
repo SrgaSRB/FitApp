@@ -53,8 +53,8 @@ const TrainingHistoryView: React.FC<TrainingHistoryViewProps> = ({ onClose }) =>
 
         try {
             const response = await api.delete(`workout/${workoutId}`)
-            if (response.status === 200) {
-                setWorkouts(prev => prev.filter(w => w.id !== workoutId)); 
+            if (response.status === 200 || response.status === 204) {
+                setWorkouts(prev => prev.filter(w => w.id !== workoutId));
             }
             else
                 alert("Greska pri brisanju treninga")
@@ -143,7 +143,7 @@ const TrainingHistoryView: React.FC<TrainingHistoryViewProps> = ({ onClose }) =>
                                         </div>
                                         <div id="w-node-_7a76c220-2a6b-5f5b-c976-eeda9e4bd2cb-3100933c" className="div-block-9">
                                             <div className="text-block-14">Beleška</div>
-                                            <div className="text-block-15 training-history-div-note">{workout.note}</div>
+                                            <div className="text-block-15 training-history-div-note">{workout.note ? workout.note : "/"}</div>
                                         </div>
                                         <a className="link-block-4 w-inline-block" onClick={() => handleDeleteWorkout(workout.id)}>
                                             <img src="assets/icons/trash.png" loading="lazy" alt="" />

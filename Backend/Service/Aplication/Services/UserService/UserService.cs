@@ -1,18 +1,21 @@
-﻿using Microsoft.Identity.Client;
+﻿using FluentValidation;
 using SendGrid.Helpers.Errors.Model;
 using Service.Aplication.DTOs.User;
 using Service.Aplication.Interfaces.Repositories;
 using Service.Aplication.Interfaces.Services;
+using Service.Aplication.Exceptions;
 
 namespace Service.Aplication.Services.UserService
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IValidator<UpdateUserDto> _updateValidator;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IValidator<UpdateUserDto> updateValidator)
         {
             _userRepository = userRepository;
+            _updateValidator = updateValidator;
         }
 
         public async Task<UserInfoDto> GetUserInfoAsync(Guid userId, CancellationToken ct = default)
@@ -21,7 +24,7 @@ namespace Service.Aplication.Services.UserService
 
             if (user == null)
             {
-                throw new UnauthorizedAccessException("Invalid credentials");
+                throw new Exceptions.UnauthorizedAccessException("Invalid credentials");
             }
 
             var retUserInfo = new UserInfoDto
@@ -42,9 +45,11 @@ namespace Service.Aplication.Services.UserService
 
         public async Task UpdateUserInfoAsync(Guid userId, UpdateUserDto dto, CancellationToken ct)
         {
+            await _updateValidator.ValidateAndThrowAsync(dto, ct);
+
             bool ok = await _userRepository.UpdateUserInfoAsync(userId, dto, ct);
             if (!ok)
-                throw new NotFoundException("User not found");
+                throw new Exceptions.NotFoundException("User not found");
         }
     }
 }

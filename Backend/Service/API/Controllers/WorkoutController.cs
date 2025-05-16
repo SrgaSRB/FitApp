@@ -73,7 +73,7 @@ namespace Service.API.Controllers
         {
             Guid userId = Guid.Parse(User.FindFirstValue(JwtRegisteredClaimNames.Sub)!);
 
-            var result = await _workout.GetWeeklyStatistics(userId, dto, ct);
+            var result = await _workout.GetWeeklyStatisticsAsync(userId, dto, ct);
 
             if (result == null)
                 return NotFound();
@@ -96,11 +96,9 @@ namespace Service.API.Controllers
         [HttpDelete("{workoutId}")]
         public async Task<IActionResult> DeleteWorkout(Guid workoutId, CancellationToken ct)
         {
-            if(await _workout.DeleteWorkoutAsync(workoutId, ct))
-                return Ok();
+            await _workout.DeleteWorkoutAsync(workoutId, ct);
 
-            return NotFound();
-
+            return NoContent();
         }
 
 
